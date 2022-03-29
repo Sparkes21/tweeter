@@ -1,0 +1,27 @@
+.counter {
+  display: flex;
+  text-align: right;
+}
+
+.tweet-button {
+  background-color: blue;
+  color: white;
+}
+
+.tweet-bottom-container {
+  display:flex;
+  justify-content: space-between;
+}
+
+#tweet-text {
+  width: 100%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 5px solid black;
+  background: transparent;
+  margin-top: 1em;
+  padding-top: 2em;
+  height: 100px;
+  outline: none;
+}
