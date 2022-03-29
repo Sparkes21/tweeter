@@ -1,0 +1,18 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  background-color: rgb(216, 166, 29);
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  margin-top: 4em;
+}
+
+header > div > h2 {
+  margin: 0;
+  align-items: center;
+  color: blue;
+}
