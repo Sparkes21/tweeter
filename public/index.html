@@ -54,7 +54,18 @@
   <!-- Page-specific (main) content here -->
   <div class="tweetbox">
     <main class="container">
-      <h1>What are you humming about</h1>
+      <section class="new-tweet">
+        <h1>What are you humming about</h1>
+        <h2>Compose Tweet</h2>
+        <form>
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
       <p>Why... just why</p>
     </main>
   </div>
