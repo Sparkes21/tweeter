@@ -8,6 +8,8 @@
 
 
 $(document).ready(function() {
+
+
   const data = [
     {
       "user": {
@@ -72,5 +74,22 @@ $(document).ready(function() {
   // $('.tweet-container').append($tweet);
   
   renderTweets(data);
+
+
+  $('#tweet-form').on("submit", (function(event) {
+    event.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: $('#tweet-form').serialize(),
+    })
+    .then((data) => {
+      console.log(data);
+    }) 
+  }))
+
+  
+  
+
   
 });
