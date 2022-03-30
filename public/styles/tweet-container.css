@@ -1,0 +1,37 @@
+article {
+  border-style: solid;
+  margin-top: 2em;
+  padding: 1em;
+  padding-bottom: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 5px solid;
+  
+}
+
+article.tweet header div{
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  
+}
+.footer p {
+  display: flex;
+  border: 1px solid red;
+  align-self: flex-end;
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  margin-right: 0.5em;
+}
