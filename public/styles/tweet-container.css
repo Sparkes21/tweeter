@@ -1,3 +1,10 @@
+.tweet-container {
+  padding-bottom: 3em;
+}
+.tweet:hover {
+  box-shadow: 8px 8px lightblue;
+}
+
 article {
   border-style: solid;
   margin-top: 2em;
@@ -13,15 +20,17 @@ article {
   
 }
 
+.footer div {
+  font-size: 18px;
+  color: blue;
+}
+
 article.tweet header div{
-  border: 1px solid red;
   display: flex;
   align-items: center;
-  
 }
 .footer p {
   display: flex;
-  border: 1px solid red;
   align-self: flex-end;
 }
 
@@ -34,4 +43,13 @@ article.tweet header {
   height: 50px;
   width: 50px;
   margin-right: 0.5em;
+}
+
+.username {
+  opacity: 0.5;
+}
+
+i.fa-solid:hover {
+  color: goldenrod
+
 }
