@@ -14,7 +14,7 @@ $(document).ready(function() {
     let returnValue = [];
     for (const tweet of tweets) {
       $('.tweet-container').append(createTweetElement(tweet));
-      console.log(createTweetElement(tweet));
+      //console.log(createTweetElement(tweet));
     }
     
   }
@@ -53,14 +53,31 @@ $(document).ready(function() {
 
   $('#tweet-form').on("submit", (function(event) {
     event.preventDefault();
-    $.ajax({
-      type: "POST",
-      url: "/tweets",
-      data: $('#tweet-form').serialize(),
-    })
-    .then((data) => {
-      // console.log(data);
-    }) 
+    // console.log(event);
+    const tweetTextLength = $("#tweet-text").val().length;
+    console.log("tweetText", tweetTextLength);
+    if (tweetTextLength > 140) {
+      alert ("Maximum Character count exceeded!")
+      return;
+    }
+    if (!tweetTextLength) {
+      alert ("Nothing submitted to Tweet!");
+      return;
+    }
+    
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: $('#tweet-form').serialize(),
+        
+       })
+       .then((data) => {
+         console.log("string");
+        $("#tweet-text").val("");
+        $(".counter").val(140);
+        loadTweets();
+      }) 
+    
   }))
 
   
@@ -69,7 +86,7 @@ $(document).ready(function() {
       method: 'GET',
     })
     .then((data) => {
-      console.log(data);
+      //console.log(data);
       renderTweets(data);
     })
   }
