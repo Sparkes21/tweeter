@@ -13,7 +13,7 @@ $(document).ready(function() {
   const renderTweets = function (tweets) {
     let returnValue = [];
     for (const tweet of tweets) {
-      $('.tweet-container').append(createTweetElement(tweet));
+      $('.tweet-container').prepend(createTweetElement(tweet));
       //console.log(createTweetElement(tweet));
     }
     
@@ -72,7 +72,6 @@ $(document).ready(function() {
         
        })
        .then((data) => {
-         console.log("string");
         $("#tweet-text").val("");
         $(".counter").val(140);
         loadTweets();
@@ -86,7 +85,7 @@ $(document).ready(function() {
       method: 'GET',
     })
     .then((data) => {
-      //console.log(data);
+      $(".tweet-container").empty();
       renderTweets(data);
     })
   }
