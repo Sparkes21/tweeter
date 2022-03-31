@@ -1,3 +1,13 @@
+
+.tweetbox {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.new-tweet {
+  margin-top: 7em;
+}
 .counter {
   display: flex;
   text-align: right;
@@ -31,4 +41,18 @@
   display: none;
   border: 5px solid red;
   font-weight: bold;
+}
+
+
+/* mobile screens */
+
+@media only screen and (max-width: 1023px) {
+  .new-tweet{
+    margin-top: 0em;
+  }
+  .tweetbox {
+    justify-content: center;
+    align-items: center;
+    width: 100%
+  }
 }

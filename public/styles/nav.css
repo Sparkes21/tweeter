@@ -2,7 +2,7 @@
 nav {
   display: flex;
   justify-content: space-between; 
-  height: 120px;
+  height: 100px;
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
@@ -10,13 +10,13 @@ nav {
   position: fixed;
   top: 0;
   z-index: 9999;
-  
 } 
 
 nav > span {
   display: flex;
   align-items: center;
   margin-left: 1.5em;
+  font-family: "Bungee", cursive;
 }
 
 nav > div {
@@ -30,3 +30,17 @@ nav > div {
 #arrow-down {
   color: red;
 }
+
+/* mobile screens */
+
+@media only screen and (max-width: 1023px) {
+  nav {
+    font-size: 24px;
+    background-color: rgb(216, 166, 29);
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    position: relative;
+    height: 100px;
+  }
+  
+}
+

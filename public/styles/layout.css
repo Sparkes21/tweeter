@@ -19,6 +19,9 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 /*
@@ -27,11 +30,7 @@ body {
  nav span {
    font-family: "Bungee", cursive;
  }
-.tweetbox {
-  display: flex;
-  justify-content: center;
 
-}
 
 main {
   width: 90%;
@@ -39,7 +38,6 @@ main {
    display: flex;
    background-color: #f4f1ec;
    flex-direction: column;
-
 }
 
 main > h1 {

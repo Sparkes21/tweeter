@@ -7,7 +7,7 @@
 
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   const escape = function (str) {
     let div = document.createElement("div");
@@ -15,15 +15,15 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
+
   const renderTweets = function (tweets) {
     let returnValue = [];
     for (const tweet of tweets) {
       $('.tweet-container').prepend(createTweetElement(tweet));
       //console.log(createTweetElement(tweet));
     }
-    
   }
-  
+
   const createTweetElement = function (data) {
     let $tweet = `
     <article class="tweet">
@@ -48,19 +48,11 @@ $(document).ready(function() {
     `
     return $tweet;
   }
-  
-  // const $tweet = createTweetElement(tweetData);
-  // console.log("tweet", $tweet); // to see what it looks like
-  // $('.tweet-container').append($tweet);
-  
-  // renderTweets(data);
 
 
-  $('#tweet-form').on("submit", (function(event) {
+  $('#tweet-form').on("submit", (function (event) {
     event.preventDefault();
-    // console.log(event);
     const tweetTextLength = $("#tweet-text").val().length;
-    console.log("tweetText", tweetTextLength);
     if (tweetTextLength > 140) {
       $('.error-message').text("Maximum Character count exceeded!");
       $('.error-message').slideDown();
@@ -71,34 +63,31 @@ $(document).ready(function() {
       $('.error-message').slideDown();
       return;
     }
-    
-      $.ajax({
-        type: "POST",
-        url: "/tweets",
-        data: $('#tweet-form').serialize(),
-        
-       })
-       .then((data) => {
+
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: $('#tweet-form').serialize(),
+
+    })
+      .then((data) => {
         $('.error-message').slideUp();
         $("#tweet-text").val("");
         $(".counter").val(140);
         loadTweets();
-      }) 
-    
+      })
+
   }))
 
-  
   const loadTweets = function () {
-    $.ajax('/tweets', { 
+    $.ajax('/tweets', {
       method: 'GET',
     })
-    .then((data) => {
-      $(".tweet-container").empty();
-      renderTweets(data);
-    })
+      .then((data) => {
+        $(".tweet-container").empty();
+        renderTweets(data);
+      })
   }
   loadTweets();
-  // console.log(loadedTweets);
-  
-  
+
 });
