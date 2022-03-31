@@ -62,11 +62,13 @@ $(document).ready(function() {
     const tweetTextLength = $("#tweet-text").val().length;
     console.log("tweetText", tweetTextLength);
     if (tweetTextLength > 140) {
-      alert ("Maximum Character count exceeded!")
+      $('.error-message').text("Maximum Character count exceeded!");
+      $('.error-message').slideDown();
       return;
     }
     if (!tweetTextLength) {
-      alert ("Nothing submitted to Tweet!");
+      $('.error-message').text("Nothing submitted to Tweet!");
+      $('.error-message').slideDown();
       return;
     }
     
@@ -77,6 +79,7 @@ $(document).ready(function() {
         
        })
        .then((data) => {
+        $('.error-message').slideUp();
         $("#tweet-text").val("");
         $(".counter").val(140);
         loadTweets();

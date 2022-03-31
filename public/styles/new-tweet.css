@@ -25,3 +25,10 @@
   height: 100px;
   outline: none;
 }
+
+.error-message {
+  color: red;
+  display: none;
+  border: 5px solid red;
+  font-weight: bold;
+}
