@@ -9,6 +9,11 @@
 
 $(document).ready(function() {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   const renderTweets = function (tweets) {
     let returnValue = [];
@@ -30,7 +35,7 @@ $(document).ready(function() {
       </div>
       <p class="handle">${data.user.handle}</p>
     </header>
-    <p>${data.content.text}</p>
+    <p>${escape(data.content.text)}</p>
     <footer class="footer">
       <p style="font-size: 18px;">${timeago.format(data.created_at)}</p> 
       <div>
