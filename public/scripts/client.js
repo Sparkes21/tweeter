@@ -32,7 +32,7 @@ $(document).ready(function() {
     </header>
     <p>${data.content.text}</p>
     <footer class="footer">
-      <p style="font-size: 18px;">${data.created_at}</p> 
+      <p style="font-size: 18px;">${timeago.format(data.created_at)}</p> 
       <div>
         <i class="fa-solid fa-font-awesome"></i>
         <i class="fa-solid fa-retweet"></i>
@@ -76,6 +76,5 @@ $(document).ready(function() {
   loadTweets();
   // console.log(loadedTweets);
   
-
   
 });
