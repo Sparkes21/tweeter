@@ -14,9 +14,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["screenshot of desktop site"](https://github.com/Sparkes21/tinyapp/blob/main/docs/urls-page%20copy.png)
+!["screenshot of desktop site"](https://github.com/Sparkes21/tweeter/blob/master/Docs/tweeter-desktop.png?raw=true)
 
-!["screenshot of mobile size site"](https://github.com/Sparkes21/tinyapp/blob/main/docs/register-page%20copy.png)
+!["screenshot of mobile size site"](https://github.com/Sparkes21/tweeter/blob/master/Docs/tweeter-mobile.png?raw=true)
 
 
 
