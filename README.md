@@ -13,7 +13,7 @@ This repository is the starter code for the project: Students will fork and clon
 4. Go to <http://localhost:8080/> in your browser.
 
 ## Final Product
-!["desktop screenshot"] ()
+
 
 ## Dependencies
 
